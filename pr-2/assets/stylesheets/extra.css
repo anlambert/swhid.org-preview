@@ -27,8 +27,10 @@ a {
 .md-typeset a { color: var(--swh-primary); }
 /* .md-typeset a:visited { color: var(--swh-yellow); } */
 .md-header {
-  color: rgba(0, 0, 0, 0.75);
   background: var(--swh-primary);
+}
+.md-header__button, .md-header__source a {
+  color: white !important;
 }
 .md-tabs { background: var(--swh-neutral); }
 
