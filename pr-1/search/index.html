@@ -2065,8 +2065,7 @@
 
 <script>
 (function () {
-  let BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
-  BASE = BASE === "." ? ".." : BASE;
+  const BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
   const ensure = (href, tag, attr) => {
     return new Promise((res, rej) => {
       if (tag === "script" && window.PagefindUI) return res();

@@ -51,8 +51,7 @@
     }
 
     // Ensure Pagefind UI bundle is available on every page
-    let BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
-    BASE = BASE === "." ? ".." : BASE;
+    const BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
     try {
       await ensureScript(`${BASE}/pagefind/pagefind-ui.js`);
     } catch (e) {

@@ -2172,8 +2172,7 @@
 (function () {
   const container = document.getElementById('swhid-version-selector');
   const select = document.getElementById('version-selector');
-  let BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
-  BASE = BASE === "." ? ".." : BASE;
+  const BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
   const path = location.pathname.replace(/\/+$/, ''); // trim trailing slash
 
   // Versions list from mkdocs.yml -> extra.swhid_spec_versions
