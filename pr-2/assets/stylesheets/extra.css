@@ -29,7 +29,9 @@ a {
 .md-header {
   background: var(--swh-primary);
 }
-.md-header__button, .md-header__source a {
+.md-header__button,
+.md-header__source a,
+.md-footer a {
   color: white !important;
 }
 .md-tabs { background: var(--swh-neutral); }
