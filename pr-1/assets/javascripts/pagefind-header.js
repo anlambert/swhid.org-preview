@@ -51,9 +51,10 @@
     }
 
     // Ensure Pagefind UI bundle is available on every page
-    const BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
+    let BASE = (window.__BASE_URL__ || "").replace(/\/+$/, "");
+    BASE = BASE === "." ? "" : BASE + "/";
     try {
-      await ensureScript(`${BASE}/pagefind/pagefind-ui.js`);
+      await ensureScript(`${BASE}pagefind/pagefind-ui.js`);
     } catch (e) {
       console.warn("Pagefind UI script not found");
       return;
@@ -64,8 +65,6 @@
     /* global PagefindUI */
     const pagefind = new PagefindUI({
       element: "#pf-header-ui",
-      bundlePath: `${BASE}/pagefind/`,
-      baseUrl: `${BASE}/`,
       showSubResults: true,
       showImages: false,
       showFilters: ["section", "spec_version", "tag"],
